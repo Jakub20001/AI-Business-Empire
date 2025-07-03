@@ -1,7 +1,9 @@
+# Modele SQLAlchemy - reprezentują tabele w bazie danych
+
 from sqlalchemy import Column, Integer, String, Text, ForeignKey
 from sqlalchemy.orm import relationship
 from .database import Base
-
+# Model użytkownika
 class User(Base):
     __tablename__ = 'users'
     
@@ -10,7 +12,7 @@ class User(Base):
     hashed_password = Column(String)
     
     announcements = relationship("Announcement", back_populates="owner")
-    
+# Model ogłoszenia (jeśli będzie w DB)    
 class Announcement(Base):
     __tablename__ = "announcements"
     
@@ -20,5 +22,4 @@ class Announcement(Base):
     owner_id = Column(Integer, ForeignKey('users.id'))
     
     owner = relationship("User", back_populates="announcements")
-    
     
