@@ -1,6 +1,9 @@
+// File: niches/Regional/Zielonki-Hub/frontend/src/components/AnnouncementForm.jsx
+
 import React, { useState } from 'react';
 import {createAnnouncement} from '../services/api'
 
+// Importujemy funkcję do tworzenia ogłoszenia
 export default function AnnouncementForm({ onNew }) {
     const [formData, setFormData] = useState({title: '', description: ''});
 
