@@ -1,26 +1,30 @@
-import React, { useEffect, useState } from 'react';
-import {getAnnouncements} from '../services/api';
-import AnnouncementForm from '../components/AnnouncementForm';
+// File: niches/Regional/Zielonki-Hub/frontend/src/components/AnnouncementForm.jsx
 
-export default function Home() {
-    const [announcements, setAnnouncements] = useState([]);
+import React, { useState } from 'react';
+import {createAnnouncement} from '../services/api'
 
-    useEffect(() => {
-        getAnnouncements().then(setAnnouncements);
-    }, []);
+// Importujemy funkcję do tworzenia ogłoszenia
+export default function AnnouncementForm({ onNew }) {
+    const [formData, setFormData] = useState({title: '', description: ''});
+
+    const handleChange = e => 
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+
+    const handleSubmit = async e => {
+        e.preventDefault();
+        const ann = await createAnnouncement(formData);
+        if (ann) {
+            onNew(ann);
+            setFormData({title: '', description: ''});
+
+        }
+    };
 
     return (
-        <div>
-            <h1>Zielonki Hub - Ogłoszenia</h1>
-            <AnnouncementForm onNew={ann => setAnnouncements([...announcements, ann])}/>
-            <ul>
-                {announcements.map(a => (
-                    <li key={a.id}>
-                        <h3>{a.title}</h3>
-                        <p>{a.description}</p>
-                    </li>
-                ))}
-            </ul>
-        </div>
+        <form onSubmit={handleSubmit}>
+            <input name="title" value={formData.title} onChange={handleChange} placeholder="Tytuł" required />
+            <textarea name="description" value={formData.description} onChange={handleChange} placeholder="Opis" required/>
+            <button type="submit">Dodaj</button>
+        </form>
     );
 }
