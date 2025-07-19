@@ -1,36 +1,36 @@
 # 🛣️ Roadmap – AI Business Empire
 
-## Cel główny:
-Zbudowanie imperium AI działającego w ponad 100 niszach edukacyjno-biznesowych do końca 2026 roku.
+## Main Goal:
+Build an AI empire operating in over 100 education and business niches by the end of 2026.
 
 ---
 
-## Etap 1 – Q3 2025: Fundamenty (monorepo + core)
-✅ Stworzenie struktury folderów  
-✅ README.md + dokumentacja  
-✅ Pierwszy produkt: AI do nauki języków  
-✅ Frontend szablon
+## Stage 1 – Q3 2025: Foundations (monorepo + core)
+✅ Creating the folder structure
+✅ README.md + documentation
+✅ First product: AI for language learning
+✅ Frontend template
 
 ---
 
-## Etap 2 – Q4 2025: Rozwój produktów
-- [ ] HealthAI – monitoring zdrowia z AI
-- [ ] EduAI – interaktywne mikrolekcje
-- [ ] VoiceAI – studio dubbingu
-- [ ] CreatorAI – narzędzia dla twórców (YT, podcasty)
+## Stage 2 – Q4 2025: Product development
+- [ ] HealthAI – AI-powered health monitoring
+- [ ] EduAI – interactive micro-lessons
+- [ ] VoiceAI – dubbing studio
+- [ ] CreatorAI – tools for creators (YT, podcasts)
 
 ---
 
-## Etap 3 – Q1–Q2 2026: Skalowanie i automatyzacja
+## Stage 3 – Q1–Q2 2026: Scaling and automation
 - [ ] Docker + CI/CD (GitHub Actions)
-- [ ] Integracja Stripe i Firebase
-- [ ] Tworzenie angielskiej wersji serwisu
-- [ ] Monetizacja platformy
+- [ ] Stripe and Firebase integration
+- [ ] Creating the English version of the website
+- [ ] Platform monetization
 
 ---
 
-## Etap 4 – Q3–Q4 2026: Globalny launch
-- [ ] Kampania marketingowa
-- [ ] Wersje mobilne (Flutter / React Native)
+## Stage 4 – Q3–Q4 2026: Global launch
+- [ ] Marketing campaign
+- [ ] Mobile versions (Flutter / React Native)
 - [ ] AI Chat Assistant + Mentor + Avatar
-- [ ] Rozszerzenie do 100+ nisz
+- [ ] Expansion to 100+ niches
