@@ -12,21 +12,20 @@ The repository has a monolithic structure (monorepo) divided into topic areas an
 
 ai-business-empire/
 │
-├── education/ # EdTech and AI in education (languages, STEM, micro-lessons)
-├── health-biology/ # Health, diet, biology, mental health
-├── finance/ # Budgeting, investing, tokenization, cryptocurrencies
-├── creativity-multimedia/ # AI for creating: books, music, dubbing
-├── personal-development/ # Personal development, coaching, sleep, time management
-├── law-administration/ # AI lawyer, contracts, lawsuits, translations
-├── business-work/ # HR, CRM, project management, AI micro-companies
-├── science-tech/ # Bioinformatics, simulations, OpenScience
-├── daily-life-style/ # AI for everyday life: kitchen, dating, home
-├── global-change/ # AI vs. hunger, education Africa/Asia, ecology
-├── european-niches/ # SaaS, e-commerce, automation for SMEs
-├── national-polish-niches/ # Local applications, e-learning, analytics
-├── city-krakow-niches/ # Mobility, events, health, local business
-├── zielonki-niches/ # Family, services, education, local digitization
-├── tarnow-niches/ # Education, seniors, NGOs, local culture
-├── niche-platforms/ # Author: Wysoka Ona Młody He, Nieśmiertelność, Studio Dubbing
-├── tools/ # Docker, CI/CD, scripts, shared libraries
-└── docs/ # Documentation, roadmap, architecture
+├── education/
+├── health-biology/
+├── creativity-multimedia/
+├── personal-development/
+├── law-administration/ 
+├── business-work/
+├── science-tech/
+├── daily-life-style/ 
+├── global-change/
+├── european-niches/ 
+├── national-polish-niches/
+├── city-krakow-niches/
+├── zielonki-niches/
+├── tarnow-niches/
+├── niche-platforms/
+├── tools/ 
+└── docs/ 
