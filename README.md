@@ -8,24 +8,5 @@ To build scalable, ethical, and useful AI tools that support individual and soci
 
 ## 📦 Repository Structure
 
-The repository has a monolithic structure (monorepo) divided into topic areas and local niches:
+The repository has a monolithic structure (monorepo) divided into topic areas and local niches.
 
-ai-business-empire/
-│
-├── education/
-├── health-biology/
-├── creativity-multimedia/
-├── personal-development/
-├── law-administration/ 
-├── business-work/
-├── science-tech/
-├── daily-life-style/ 
-├── global-change/
-├── european-niches/ 
-├── national-polish-niches/
-├── city-krakow-niches/
-├── zielonki-niches/
-├── tarnow-niches/
-├── niche-platforms/
-├── tools/ 
-└── docs/ 
