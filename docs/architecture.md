@@ -1,4 +1,3 @@
-# 🏗️ Architektura systemu - AI Business Empire
-
-## 1. Struktura projektu (Monorepo)
-Projekt wykorzystuje strukturę monorepo, która gromadzi wszystkie niszowe moduły AI w jednym repozytorium.
+# 🏗️ System Architecture - Imperium AI Biznesu
+## 1. Project Structure (Monorepo)
+The project uses a monorepo structure that stores all niche AI modules in a single repository.
