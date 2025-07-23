@@ -13,3 +13,115 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model User {
+  id        Int     @id @default(autoincrement())
+  username  String  @unique
+  xp        Int     @default(0)
+  level     Int     @default(1)
+  email     String  @unique
+  name      String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  progress  Progress[]
+}
+
+model Lesson {
+  id          Int     @id @default(autoincrement())
+  title       String
+  content     String?
+  level       String
+  language    String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  quiz        Quiz[]
+  progress    Progress[]
+}
+
+model Progress {
+  id        Int     @id @default(autoincrement())
+  userId    Int
+  lessonId  Int
+  status    enum
+  score     Int
+  updatedAt DateTime @updatedAt
+
+  user   User   @relation(fields: [userId], references: [id])
+  lesson Lesson @relation(fields: [lessonId], references: [id])
+}
+
+model Quiz {
+  id        Int     @id @default(autoincrement())
+  lessonId  Int
+  question  String
+  answer    String
+  createdAt DateTime @default(now())
+
+  lesson Lesson @relation(fields: [lessonId], references: [id])
+}
+
+model Dialogue {
+  id        int     @id @default(autoincrement())
+  title     String
+  language  String
+  level     String
+  content   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model MotivationEvent {
+  id      Int         @id @default(autoincrement())
+  userId  Int
+  type    String      // np. "completed_lesson", "streak_bonus", "quiz_perfect"
+  points  Int
+  createdAt  DateTime @default(now())
+
+  user    User    @relation(fields: [userId], references: [id])
+}
+
+model OpenQuestion {
+  id      Int       @id @default(autoincrement())
+  lessonId  Int
+  question  String
+  idealAnswer String
+  createdAt   DateTime  @default(now())
+  
+  lesson      Lesson    @relation(fields: [lessonId], references: [id])
+}
+
+model UserAnswer {
+  id        Int       @id @default(autoincrement())
+  userId    Int
+  openQuestionId  Int
+  answer    String
+  score     Int?
+  createdAt DateTime @default(now())
+
+  user      User        @relation(fields: [userId], references: [id])
+  openQuestion  OpenQuestion  @relation(fields: [openQuestionId], references: [id])
+}
+
+model Comment {
+  id      Int       @id @default(autoincrement())
+  userId  Int
+  lessonId Int?
+  quizId   Int?
+  content  String
+  createdAt DateTime @default(now())
+
+  user    User    @relation(fields: [userId], references: [id])
+  Lesson  Lesson? @relation(fields: [lessonId], references: [id])
+  quiz    Quiz?   @relation(fields: [quizId], references: [id])
+}
+
+model DailyActivity {
+  id      Int       @id @default(autoincrement())
+  userId  Int 
+  date    DateTime
+  completedLessons Int  @default(0)
+  completedQuizzes Int  @default(0)
+
+  user      User    @relation(fields: [userId], references: [id])
+}
+
