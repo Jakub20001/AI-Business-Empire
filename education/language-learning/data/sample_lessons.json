@@ -1,0 +1,13 @@
+[
+    {
+        "title": "Greetings in Spanish",
+        "content": "Hola, ¿cómo estás?",
+        "level": "Beginner"    
+    },
+    {
+        "title": "Ordering Food",
+        "content": "Quisiera una pizza, por favor.",
+        "level": "intermediate"
+    }
+
+]
